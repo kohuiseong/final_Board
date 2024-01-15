@@ -5,7 +5,6 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
@@ -20,17 +19,25 @@ public class PostService {
     return params.getId();
   }
 
+
   /**
    * 게시글 수정
    *
    * @param params - 게시글 정보
    * @return PK
    */
+
+  public PostResponse findPostById(final Long id) {
+    return postMapper.findById(id);
+  }
+
+
   @Transactional
   public Long updatePost(final PostRequest params) {
     postMapper.update(params);
     return params.getId();
   }
+
 
   /**
    * 게시글 삭제
@@ -53,3 +60,16 @@ public class PostService {
 
   }
 }
+
+    public Long deletePost(final Long id) {
+      postMapper.deleteById(id);
+      return id;
+    }
+
+    public List<PostResponse> findAllPost() {
+      return postMapper.findAll();
+    }
+
+  }
+
+
