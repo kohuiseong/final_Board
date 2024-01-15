@@ -26,15 +26,8 @@ public interface PostMapper {
 
   /* 게시글 삭제 */
   void deleteByid(Long id);
-}
 
   void deleteById(Long id);
 
-  List<PostResponse> findAll();
-
-  /*
-  게시글 수 카운팅
-   */
-  int count();
 }
 

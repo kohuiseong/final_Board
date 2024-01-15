@@ -61,15 +61,4 @@ public class PostService {
   }
 }
 
-    public Long deletePost(final Long id) {
-      postMapper.deleteById(id);
-      return id;
-    }
-
-    public List<PostResponse> findAllPost() {
-      return postMapper.findAll();
-    }
-
-  }
-
 

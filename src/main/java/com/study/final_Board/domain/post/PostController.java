@@ -17,13 +17,5 @@ public class PostController {
   public  String openPostWrite(Model model) {
       return "post/write";
 
-public class PostController {
-
-  private final PostService postService;
-
-  @GetMapping("/post/write.do")
-  public String openPostWrite(Model model) {
-    return "post/write";
-
   }
 }
