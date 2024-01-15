@@ -7,6 +7,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @RequiredArgsConstructor
+
+
+public class PostController {
+
+  private final  PostService postService;
+
+  @GetMapping("/post/write.do")
+  public  String openPostWrite(Model model) {
+      return "post/write";
+
 public class PostController {
 
   private final PostService postService;
@@ -14,5 +24,6 @@ public class PostController {
   @GetMapping("/post/write.do")
   public String openPostWrite(Model model) {
     return "post/write";
+
   }
 }

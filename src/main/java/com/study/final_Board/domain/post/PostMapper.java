@@ -10,6 +10,24 @@ public interface PostMapper {
 
   void update(PostRequest params); // 게시글 수정
 
+
+
+
+  /**
+   * 게시글 리스트 조회
+   */
+  List<PostResponse> findAll();
+
+  /**
+   * 게시글 수 카운팅
+   */
+  int count();
+
+
+  /* 게시글 삭제 */
+  void deleteByid(Long id);
+}
+
   void deleteById(Long id);
 
   List<PostResponse> findAll();
@@ -19,3 +37,4 @@ public interface PostMapper {
    */
   int count();
 }
+
